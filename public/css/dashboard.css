@@ -1,0 +1,263 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+
+}
+
+.header {
+    width: 100%;
+    height: auto;
+    background-color: #2a2abc;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 10%;
+
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    width: 100%;
+    margin-left:60%;
+    margin-right: 20px;
+
+}
+
+.search-input {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    margin-right: 10px;
+    width: 100%;
+}
+
+.search-button {
+    background-color: #2a2abc;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.main-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width:100%;
+}
+
+.actions-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #2a2abc;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #3e3e3e;
+}
+
+.events-container {
+    margin-top: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #f8f8f8;
+}
+
+.form-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.form-group input, .form-group textarea, .form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+
+
+}
+.checkbox-group input {
+    margin-right: 10px;
+}
+#logoutBtn {
+    margin-top: 20px;
+    display: block;
+    width: 30%;
+    text-align: center;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: #2a2abc;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 4px;
+}
+.submit-button {
+    background-color: #2a2abc;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.button{
+    background-color: #2a2abc;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.back {
+    position: absolute;
+    top: 5%;
+    left: 8%;
+    color: #000;
+    border: none;
+    z-index: 1000;
+    padding: 5px;
+    background: #fff;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    height: 35px;
+    width: 80px;
+}
+
+.back:hover {
+    background-color: #3e3e3e;
+    color: white;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+@media (max-width: 600px) {
+   .container {
+       padding: 10px;
+       width: 700px;
+   }
+    .header {
+         padding: 5px 10px;
+         margin-left: 2px;
+    }
+    .logo {
+        font-size: 20px;
+    }
+    .search-bar {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .search-input {
+        width: 70%;
+    }
+    .search-button {
+        padding: 5px 10px;
+    }
+    .main-content {
+        padding: 10px;
+        margin-left: 2px;
+    }
+    .table{
+        width: 600px;
+    }
+    .actions-bar {
+        flex-direction: column;
+    }
+    .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .form-group label {
+        font-size: 16px;
+    }
+    .form-group input, .form-group textarea, .form-group select {
+        font-size: 14px;
+    }
+    .submit-button {
+        font-size: 14px;
+    }
+    .button {
+        font-size: 14px;
+    }
+    .back {
+        top: 5%;
+        left: 8%;
+        height: 30px;
+        width: 60px;
+    }
+}

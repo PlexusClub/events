@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plexus Club Events</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <header>
+        <button class="back"><b>&lt;- Back</b></button>
+        <button class="admin-panel" onclick="window.location.href='../admin/login.html'">Admin Panel</button>
+    </header>
+
+    <div class="carousel">
+        <div class="list">
+            <!-- Events will be dynamically inserted here by client.js -->
+        </div>
+
+        <!--next prev button-->
+        <div class="arrows">
+            <button class="prev">&lt;</button>
+            <button class="next">&gt;</button>
+        </div>
+
+        <!-- time running -->
+        <div class="timeRunning"></div>
+    </div>
+    <script type="module" src="./js/client.js"></script>
+    <script type="module" src="./js/events.js"></script>
+</body>
+</html>

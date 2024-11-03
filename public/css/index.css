@@ -1,0 +1,390 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Header section */
+
+header{
+    width: 100%; 
+    max-width: 100%;
+    padding-left: 100px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1000;
+}
+
+header nav a{
+    color: #fff;
+    margin-right: 5px;
+    padding: 5px 10px;
+    font-size: 16px;
+    transition: 0.2s;
+    text-decoration: none;
+}
+
+a.active{
+    background: #2a2acd;
+    border-radius: 2px;
+}
+
+a:hover{
+    background: #2a2acd;
+    border-radius: 2px;
+}
+
+/* carousel */
+
+.carousel{
+    width: 100vw;
+    height: 100vh;
+    margin-top: -50px;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel .list .item{
+    width: 180px;
+    height: 250px;
+    position: absolute;
+    top: 80%;
+    transform: translateY(-70%);
+    left: 70%;
+    border-radius: 20px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+    background-position: 50% 50%;
+    background-size: cover;
+    z-index: 100;
+    transition: 1s;
+}
+
+.carousel .list .item:nth-child(1),
+.carousel .list .item:nth-child(2){
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel .list .item:nth-child(3){
+    left: 67%;
+}
+
+.carousel .list .item:nth-child(4){
+    left: calc(67% + 200px);
+}
+
+.carousel .list .item:nth-child(5){
+    left: calc(67% + 400px);
+}
+
+.carousel .list .item:nth-child(6){
+    left: calc(67% + 600px);
+}
+
+.carousel .list .item:nth-child(n+7){
+    left: calc(67% + 800px);
+    opacity: 0;
+    visibility: hidden;
+
+}
+.list .item .content{
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    width: 400px;
+    text-align: left;
+    color: #fff;
+    display: none;
+}
+
+.list .item:nth-child(2) .content{
+    display: block;
+}
+
+.content .title .des .btn{
+    font-size: 50px;
+    text-transform: uppercase;
+    color: #2a2acd;
+    font-weight: bold;
+    line-height: 1;
+
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.3s 1 forwards;
+}
+.name{
+    font-size: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #2a2abc;
+    margin-bottom: 10px;
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.3s 1 forwards;
+}   
+
+
+.content .btn button{
+    text-align: center;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border: 2px solid #fff;
+}
+
+.content .btn button:nth-child(1){
+    margin-right: 15px;
+    background: transparent;
+    color: #2a2acd;
+    border: 2px solid #fff;
+    transition: 0.3s;
+    margin-bottom: 2px;
+}
+
+.content .btn button:nth-child(1):hover{
+    background-color: #3e3e3e;
+    color: #fff;
+    border-color: #2a2acd;
+}
+
+.content .btn button:nth-child(2){
+    background: transparent;
+    color: #2a2acd;
+    border: 2px solid #fff;
+    transition: 0.3s;
+}
+
+.content .btn button:nth-child(2):hover{
+    background-color: #3e3e3e;
+    color: #fff;
+    border-color: #2a2acd;
+}
+.admin-panel{
+    position: absolute;
+    top: 2%;
+    right: 1%;
+    background: #2a2acd;
+    border-radius: 0 0 0 15px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 3px;
+    height: 45px;
+    width: 100px;
+}
+
+.admin-panel:hover{
+    background: #fff;
+    color: #000;
+}
+.back{
+    position: absolute;
+    top: 2%;
+    left: 1%;
+    color: #fff;
+    border:none;
+    z-index: 1000;
+    padding: 5px;
+    background: #2a2acd;
+    border-radius: 0 0 15px 0;
+    cursor: pointer;
+    transition: 0.3s;
+    height: 45px;
+    width: 80px;
+}
+
+.back:hover{
+    background: #fff;
+    color: #000;
+}
+
+
+@keyframes animate {
+    
+    from{
+        opacity: 0;
+        transform: translate(0, 100px);
+        filter: blur(33px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translate(0);
+        filter: blur(0);
+    }
+}
+
+/* next prev arrows */
+
+.arrows{
+    position: absolute;
+    top: 80%;
+    right: 52%;
+    z-index: 100;
+    width: 300px;
+    max-width: 30%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.arrows button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #2a2acd;
+    color: #fff;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-family: monospace;
+    font-weight: bold;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.arrows button:hover{
+    background: #fff;
+    color: #000;
+}
+
+
+/* time running */
+.carousel .timeRunning{
+    position: absolute;
+    z-index: 1000;
+    width: 0%;
+    height: 4px;
+    background-color: #2a2acd;
+    left: 0;
+    top: 0;
+    animation: runningTime 7s linear 1 forwards;
+}
+
+@keyframes runningTime {
+    
+    from{width: 0%;}
+    to{width: 100%;}
+
+}
+
+@media screen and (max-width: 630px){
+    header nav a{
+        font-size: 14px;
+        margin-left: 0;
+    }
+    .carousel .list .item{
+        width: 150px;
+        height: 200px;
+    }
+    .carousel .list .item:nth-child(1),
+    .carousel .list .item:nth-child(2){
+        top:0;
+        left: 0;
+        transform: translate(0, 0);
+        width: 100%;
+        height: 100%;
+    }
+    .carousel .list .item:nth-child(3){
+        left: 50%;
+    }
+    .carousel .list .item:nth-child(4){
+        left: calc(50% + 150px);
+    }
+    .carousel .list .item:nth-child(5){
+        left: calc(50% + 300px);
+    }
+    .carousel .list .item:nth-child(6){
+        left: calc(50% + 450px);
+    }
+    .carousel .list .item:nth-child(n+7){
+        left: calc(50% + 600px);
+        opacity: 0;
+        visibility: hidden;
+    }
+    .list .item .content .des{
+        font-size: 16px;
+    }
+    .content .title .name .des .btn{
+        max-width: 300px;
+        font-size: 40px;
+    }
+    .content .btn button{
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        font-size: 14px;
+        margin-left: 1%;
+        margin-right: 80%;
+        text-align: center;
+        height: 55px;
+        width: 95px;
+        border-radius: 5px;
+    }
+   
+    .content .btn button:nth-child(1){
+        background: transparent;
+        margin-right: 15px;
+        margin-bottom: 2px;
+        color: #fff;
+        border: 2px solid #2a2abc;
+        transition: 0.3s;
+    }
+    .content .btn button:nth-child(2){
+        background: transparent;
+        color: #fff;
+        border: 2px solid #2a2abc;
+        transition: 0.3s;
+    }
+
+    .content .btn button:nth-child(1):hover{
+        background-color: #3e3e3e;
+        color: #fff;
+        border-color: #3e3e3e;
+    }
+    .content .btn button:nth-child(2):hover{
+        background-color: #3e3e3e;
+        color: #fff;
+        border-color: #3e3e3e;
+    }
+
+    .arrows{
+        top: 80%;
+        right: 50%;
+    }
+    .arrows button{
+        width: 40px;
+        height: 40px;
+    }
+    .carousel .timeRunning{
+        height: 3px;
+    }
+    .admin-panel{
+        margin-top: 2%;
+        padding: 3px;
+        margin-right: 1%;
+        height: 45px;
+        width: 100px;
+    }
+    .back{
+        margin-top: 2%;
+        padding: 3px;
+        margin-left: 1%;
+        height:45px;
+        width: 80px;
+    }
+    .name {
+        font-size: 40px;    
+
+    }
+}
