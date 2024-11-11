@@ -9,6 +9,7 @@ import { dirname } from 'path';
 import authRoutes from './routes/auth.js';
 import eventRoutes from './routes/events.js';
 import adminRoutes from './routes/admin.js';
+import registrationRoutes from './routes/registrations.js';
 
 const app = express();
 
@@ -26,6 +27,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/api/auth', authRoutes);
 app.use('/api/events', eventRoutes);
 app.use('/admin', adminRoutes);
+app.use('/api/registrations', registrationRoutes);
 
 // Root route
 app.get('/', (req, res) => {

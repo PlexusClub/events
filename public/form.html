@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Event Registration</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/registration.css">
+    <link rel="stylesheet" href="./css/form.css">
 </head>
 <body>
     <header>
@@ -17,9 +16,10 @@
         <form id="registrationForm">
             <input type="hidden" id="eventId" name="eventId">
             <input type="text" id="userName" name="userName" placeholder="Full Name" required pattern="[A-Za-z\s]+" title="Only letters and spaces are allowed" oninput="this.value = this.value.toUpperCase()">
-            <input type="text" id="rollNo" name="rollNo" placeholder="Roll Number" required oninput="this.value = this.value.toUpperCase()">
+            <input type="text" id="rollNo" name="rollNo" placeholder="Roll Number" required>
             <input type="tel" id="mobileNo" name="mobileNo" placeholder="Mobile Number" required pattern="[0-9]{10}" title="Please enter a 10-digit mobile number">
             <input type="email" id="email" name="email" placeholder="Email" required>
+            <input type="text" id="college" name="college" placeholder="College" value="MRCE" required>
             <div class="select-container">
                 <select id="dept" name="dept" required>
                     <option value="" disabled selected>Select Department</option>
@@ -28,6 +28,14 @@
                     <option value="CSM">CSM</option>
                     <option value="CSE">CSE</option>
                     <option value="IT">IT</option>
+                </select>
+                <select id="year" name="year" required>
+                    <option value="" disabled selected>Select year</option>
+                    <option value="1">1-YEAR</option>
+                    <option value="2">2-YEAR</option>
+                    <option value="3">3-YEAR</option>
+                    <option value="4">4-YEAR</option>
+                    <option value="faculty">FACULTY</option>
                 </select>
                 <select id="section" name="section" required>
                     <option value="" disabled selected>Select Section</option>
@@ -40,7 +48,6 @@
             <button type="submit">Register</button>
         </form>
     </div>
-
-    <script src="./js/registration.js"></script>
+    <script src="./js/form.js"></script>
 </body>
 </html>

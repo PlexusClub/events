@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const searchInput = document.getElementById('searchInput');
     const searchButton = document.getElementById('searchButton');
     let events = [];
+    let currentEventId = null;
 
     // Fetch and render events
     const fetchEvents = async () => {
@@ -33,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         const table = `
-            <table>
+            <table class="w-full">
                 <thead>
                     <tr>
                         <th>Name</th>
@@ -53,8 +54,8 @@ document.addEventListener('DOMContentLoaded', function () {
                             <td>${event.category}</td>
                             <td>${event.status}</td>
                             <td>
-                                <button onclick="editEvent(${event.id})" class="btn">Edit</button>
-                                <button onclick="deleteEvent(${event.id})" class="btn">Delete</button>
+                                <button onclick="editEvent(${event.id})" class="btn btn-blue">Edit</button>
+                                <button onclick="deleteEvent(${event.id})" class="btn btn-red">Delete</button>
                             </td>
                         </tr>
                     `).join('')}
@@ -66,6 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Event form handling
     createEventBtn.addEventListener('click', () => {
+        currentEventId = null;
         eventForm.reset();
         eventFormContainer.style.display = 'block';
         eventList.style.display = 'none';
@@ -88,15 +90,20 @@ document.addEventListener('DOMContentLoaded', function () {
         eventData.is_virtual = formData.get('is_virtual') === 'on';
 
         try {
-            const response = await fetch('http://localhost:3000/api/events', {
-                method: 'POST',
+            const url = currentEventId 
+                ? `http://localhost:3000/api/events/${currentEventId}`
+                : 'http://localhost:3000/api/events';
+            const method = currentEventId ? 'PUT' : 'POST';
+
+            const response = await fetch(url, {
+                method: method,
                 headers: {
                     'Content-Type': 'application/json',
                     'Authorization': `Bearer ${token}`
                 },
                 body: JSON.stringify(eventData)
             });
-            if (!response.ok) throw new Error('Failed to create event');
+            if (!response.ok) throw new Error('Failed to save event');
             await fetchEvents();
             eventFormContainer.style.display = 'none';
             eventList.style.display = 'block';
@@ -107,6 +114,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Edit event
     window.editEvent = (id) => {
+        currentEventId = id;
         const event = events.find(e => e.id === id);
         if (event) {
             Object.keys(event).forEach(key => {

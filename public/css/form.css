@@ -1,0 +1,169 @@
+:root {
+    --bg-color: rgba(0, 0, 0, 0.1);
+    --font-color: #fff;
+    --blue-color: rgba(42, 42, 188, 0.5);
+    --gray-color: rgba(62, 62, 62, 0.5);
+}
+::placeholder {
+    color: #fff;
+}
+
+body{
+    font-family: "Inter", serif;
+    background-color: var(--bg-color);
+    color: var(--font-color);
+    background-image: url(../assets/background_pc.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+}
+header {
+    padding: 10px;
+    text-align: left;
+}
+
+button.back {
+    background-color: var(--bg-color);
+    color: var(--font-color);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.registration-form {
+    max-width: 500px;
+    height: 500px;
+    margin: 50px auto;
+    padding-top: 50px;
+    padding-left: 20px;
+    padding-right: 40px;
+    padding-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.registration-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
+.registration-form input,
+.registration-form select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #000;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.registration-form button {
+    width: 100%;
+    padding: 10px;
+    margin-left: 10px;
+    background-color: var(--blue-color);
+    color: var(--font-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.registration-form button:hover {
+    background-color: var(--gray-color);
+}
+
+.select-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.select-container select {
+    width: 48%;
+}
+#eventId, #userName, #rollNo, #mobileNo, #email, #college {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #000;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: transparent;
+    color: #fff;
+}
+#dept, #year, #section {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #000;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: transparent;
+    color: #fff;
+}
+
+#dept option, #year option, #section option {
+    background-color: transparent;
+    color: #000; 
+}
+
+@media (max-width: 600px) {
+    body {
+        background-image: url(../assets/background_mobile.jpg);
+    }
+    header {
+        text-align: center;
+    }
+    button.back {
+        margin: 10px 0;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+    .registration-form {
+        height:450px;
+        width:350px;
+        padding: 20px;
+       margin-top: 30%;
+       margin-bottom:20%;
+       margin-right: auto;
+       margin-left: auto;
+
+    }
+    .registration-form h2 {
+        font-size: 20px;
+    }
+    .registration-form input,
+    .registration-form select {
+        font-size: 14px;
+    }
+    .registration-form button {
+        font-size: 14px;
+    }
+    .select-container {
+        display: block;
+    }
+    .select-container select {
+        width: 100%;
+    }
+    #eventId, #userName, #rollNo, #mobileNo, #email, #college {
+    padding: 5px;
+    font-size: 14px;
+    margin: 5px 0;
+    background-color: transparent;
+
+    }
+    #dept, #year, #section {
+    padding: 5px;
+    margin: 5px auto;
+    font-size: 14px;
+    background-color: transparent;
+    }
+    .registration-form button {
+        margin: 10px auto;
+    }
+}

@@ -1,10 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+:root {
+    --bg-color: rgba(0, 0, 0, 0.1);
+    --font-color: #fff;
+    --blue-color: rgba(42, 42, 188, 0.5);
+    --gray-color: rgba(62, 62, 62, 0.5);
+}
+::placeholder {
+    color: var(--font-color);
+}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+}
+body {
+    font-family: "Inter", serif;
+    background-color: var(--bg-color);
+    color: var(--font-color);
+    background-image: url(../assets/background_pc.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
 }
 
 /* Header section */
@@ -21,7 +39,7 @@ header{
 }
 
 header nav a{
-    color: #fff;
+    color: var(--font-color);
     margin-right: 5px;
     padding: 5px 10px;
     font-size: 16px;
@@ -30,12 +48,12 @@ header nav a{
 }
 
 a.active{
-    background: #2a2acd;
+    background: var(--blue-color);
     border-radius: 2px;
 }
 
 a:hover{
-    background: #2a2acd;
+    background: var(--blue-color);
     border-radius: 2px;
 }
 
@@ -103,7 +121,7 @@ a:hover{
     transform: translateY(-50%);
     width: 400px;
     text-align: left;
-    color: #fff;
+    color: var(--font-color);
     display: none;
 }
 
@@ -111,92 +129,98 @@ a:hover{
     display: block;
 }
 
-.content .title .des .btn{
+.content .title .btn{
     font-size: 50px;
     text-transform: uppercase;
-    color: #2a2acd;
+    color: var(--blue-color);
     font-weight: bold;
     line-height: 1;
 
     opacity: 0;
     animation: animate 1s ease-in-out 0.3s 1 forwards;
 }
+
+.des{
+    font-size: 20px;
+    margin-top: 10px;
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.6s 1 forwards;
+}
 .name{
     font-size: 50px;
     font-weight: bold;
     text-transform: uppercase;
-    color: #2a2abc;
+    color: var(--blue-color);
     margin-bottom: 10px;
     opacity: 0;
     animation: animate 1s ease-in-out 0.3s 1 forwards;
-}   
-
-
+    color:#3131ca;
+}  
 .content .btn button{
     text-align: center;
     padding: 10px 20px;
     border: none;
     cursor: pointer;
     font-size: 16px;
-    border: 2px solid #fff;
+    border: 2px solid var(--font-color);
 }
 
 .content .btn button:nth-child(1){
     margin-right: 15px;
     background: transparent;
-    color: #2a2acd;
-    border: 2px solid #fff;
-    transition: 0.3s;
+    color: var(--font-color);
+    border: none;   
     margin-bottom: 2px;
 }
 
 .content .btn button:nth-child(1):hover{
-    background-color: #3e3e3e;
-    color: #fff;
-    border-color: #2a2acd;
+    color: var(--blue-color);
+    transition: 0.3s;
 }
 
 .content .btn button:nth-child(2){
     background: transparent;
-    color: #2a2acd;
-    border: 2px solid #fff;
-    transition: 0.3s;
+    color: var(--font-color);
+    border: none;
+  
 }
 
 .content .btn button:nth-child(2):hover{
-    background-color: #3e3e3e;
-    color: #fff;
-    border-color: #2a2acd;
+    color: var(--blue-color);
+    transition: 0.3s;
+
 }
 .admin-panel{
     position: absolute;
-    top: 2%;
+    top: 3%;
     right: 1%;
-    background: #2a2acd;
-    border-radius: 0 0 0 15px;
+    border-radius: 5px;
     border: none;
-    color: #fff;
+    color: var(--font-color);
     cursor: pointer;
     transition: 0.3s;
     padding: 3px;
     height: 45px;
-    width: 100px;
+    width: 30px;
+    background-color: transparent;
+    font-size: 30px;
 }
 
 .admin-panel:hover{
-    background: #fff;
-    color: #000;
+    background: transparent;
+    color: var(--blue-color);
 }
 .back{
+    font-size: 16px;
     position: absolute;
-    top: 2%;
+    top: 3%;
     left: 1%;
-    color: #fff;
+    color: var(--font-color);
     border:none;
     z-index: 1000;
     padding: 5px;
-    background: #2a2acd;
-    border-radius: 0 0 15px 0;
+    background: transparent;
+    border-radius: 5px;
     cursor: pointer;
     transition: 0.3s;
     height: 45px;
@@ -204,8 +228,8 @@ a:hover{
 }
 
 .back:hover{
-    background: #fff;
-    color: #000;
+    background: transparent;
+    color: var(--blue-color);
 }
 
 
@@ -242,8 +266,8 @@ a:hover{
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: #2a2acd;
-    color: #fff;
+    background-color: var(--blue-color);
+    color: var(--font-color);
     border: none;
     outline: none;
     font-size: 16px;
@@ -254,8 +278,8 @@ a:hover{
 }
 
 .arrows button:hover{
-    background: #fff;
-    color: #000;
+    background: var(--font-color);
+    color: var(--blue-color);
 }
 
 
@@ -265,7 +289,7 @@ a:hover{
     z-index: 1000;
     width: 0%;
     height: 4px;
-    background-color: #2a2acd;
+    background-color: var(--blue-color);
     left: 0;
     top: 0;
     animation: runningTime 7s linear 1 forwards;
@@ -279,6 +303,22 @@ a:hover{
 }
 
 @media screen and (max-width: 630px){
+
+
+    header{
+        padding: 5px 10px;
+        margin-left: 2px;
+    }
+
+    header .back{
+        margin-left: 20px;
+    }
+
+    .container{
+        padding: 10px;
+        width: 700px;
+    }
+
     header nav a{
         font-size: 14px;
         margin-left: 0;
@@ -336,26 +376,26 @@ a:hover{
         background: transparent;
         margin-right: 15px;
         margin-bottom: 2px;
-        color: #fff;
-        border: 2px solid #2a2abc;
+        color: var(--font-color);
+        border: 2px solid var(--blue-color);
         transition: 0.3s;
     }
     .content .btn button:nth-child(2){
         background: transparent;
-        color: #fff;
-        border: 2px solid #2a2abc;
+        color: var(--font-color);
+        border: 2px solid var(--blue-color);
         transition: 0.3s;
     }
 
     .content .btn button:nth-child(1):hover{
-        background-color: #3e3e3e;
-        color: #fff;
-        border-color: #3e3e3e;
+        background-color: var(--gray-color);
+        color: var(--font-color);
+        border-color: var(--gray-color);
     }
     .content .btn button:nth-child(2):hover{
-        background-color: #3e3e3e;
-        color: #fff;
-        border-color: #3e3e3e;
+        background-color: var(--gray-color);
+        color: var(--font-color);
+        border-color: var(--gray-color);
     }
 
     .arrows{
@@ -375,6 +415,8 @@ a:hover{
         margin-right: 1%;
         height: 45px;
         width: 100px;
+        border: none;
+        color: var(--font-color);
     }
     .back{
         margin-top: 2%;
@@ -382,9 +424,12 @@ a:hover{
         margin-left: 1%;
         height:45px;
         width: 80px;
+        border: none;
+        color: var(--font-color);
     }
     .name {
-        font-size: 40px;    
+        font-size:40px; 
+        width: 30%;   
 
     }
 }

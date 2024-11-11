@@ -39,9 +39,8 @@ function displayPublicEvents(events) {
                 </div>
             </div>
             <button 
-                onclick="window.location.href='/registration.html?eventId=${event.id}'"
-                class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
-            >
+                onclick="window.location.href='form.html?eventId=${event.id}'"
+                class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
                 Register Now
             </button>
         </div>

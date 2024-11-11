@@ -1,23 +1,31 @@
-/* General Styles */
+:root {
+    --bg-color: rgba(0, 0, 0, 0.5);
+    --font-color: #fff;
+    --blue-color: rgba(42, 42, 188, 0.5);
+    --gray-color: rgba(62, 62, 62, 0.5);
+}
+
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Inter", serif;
+    background-color: var(--bg-color);
+    color: var(--font-color);
+    background-image: url("../assets/background_pc.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
     margin: 0;
-    padding: 0;
-    background-color: #f0f0f0;
-    color: #333;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-
 }
 
 .header {
     width: 100%;
     height: auto;
-    background-color: #2a2abc;
+    background-color: var(--blue-color);
     color: #fff;
     padding: 10px 20px;
     border-radius: 8px;
@@ -32,14 +40,13 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width:100%;
+    width: 100%;
 }
 
 .logo {
     font-size: 24px;
     font-weight: 700;
     margin-top: 10%;
-
 }
 
 .search-bar {
@@ -47,22 +54,23 @@ body {
     align-items: center;
     margin-top: 15px;
     width: 100%;
-    margin-left:60%;
+    margin-left: 60%;
     margin-right: 20px;
-
 }
 
 .search-input {
     padding: 5px 10px;
-    border: none;
+    border: 1px solid var(--font-color);
+    color: var(--font-color);
+    background-color: transparent;
     border-radius: 4px;
     margin-right: 10px;
     width: 100%;
 }
 
 .search-button {
-    background-color: #2a2abc;
-    border: none;
+    background-color: var(--blue-color);
+    border: 1px solid var(--font-color);
     padding: 5px 10px;
     border-radius: 4px;
     cursor: pointer;
@@ -70,12 +78,13 @@ body {
 }
 
 .main-content {
-    background-color: #fff;
+    background-color: var(--bg-color);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
-    width:100%;
+    width: 100%;
+    color: var(--font-color);
 }
 
 .actions-bar {
@@ -86,7 +95,7 @@ body {
 }
 
 .btn {
-    background-color: #2a2abc;
+    background-color: var(--blue-color);
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -95,7 +104,7 @@ body {
 }
 
 .btn:hover {
-    background-color: #3e3e3e;
+    background-color: var(--gray-color);
 }
 
 .events-container {
@@ -114,15 +123,29 @@ th, td {
 }
 
 th {
-    background-color: #f8f8f8;
+    background-color: var(--bg-color);
+    color: var(--font-color);
 }
 
 .form-container {
-    background-color: #fff;
+    background-color: transparent;
+    color: var(--font-color);
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px var(--blue-color);
     margin-top: 20px;
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+input, textarea, select {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid ver(--blue-color);
+    background-color: transparent;
+    border-radius: 4px;
+    font-size: 16px;
+
 }
 
 .form-group {
@@ -142,16 +165,17 @@ th {
     border-radius: 4px;
     font-size: 16px;
 }
+
 .checkbox-group {
     display: flex;
     align-items: center;
     margin-bottom: 15px;
-
-
 }
+
 .checkbox-group input {
     margin-right: 10px;
 }
+
 #logoutBtn {
     margin-top: 20px;
     display: block;
@@ -161,13 +185,17 @@ th {
     border: none;
     cursor: pointer;
     font-size: 16px;
-    background-color: #2a2abc;
+    background-color: var(--blue-color);
     color: #fff;
     border: 2px solid #fff;
     border-radius: 4px;
 }
+#logoutBtn:hover {
+    background-color: var(--gray-color);
+}
+
 .submit-button {
-    background-color: #2a2abc;
+    background-color: var(--blue-color);
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -175,8 +203,9 @@ th {
     cursor: pointer;
     font-size: 16px;
 }
-.button{
-    background-color: #2a2abc;
+
+.button {
+    background-color: var(--blue-color);
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -184,36 +213,76 @@ th {
     cursor: pointer;
     font-size: 16px;
 }
+
 .back {
     position: absolute;
     top: 5%;
-    left: 8%;
-    color: #000;
+    left: 5%;
+    color: #fff;
     border: none;
     z-index: 1000;
     padding: 5px;
-    background: #fff;
-    border-radius: 15px;
     cursor: pointer;
     transition: 0.3s;
     height: 35px;
     width: 80px;
+    background-color: transparent;
+    font-size: 16px;
 }
 
+
 .back:hover {
-    background-color: #3e3e3e;
-    color: white;
+    color: var(--blue-color);
     transition: background-color 0.3s, color 0.3s;
 }
 
+.registration {
+    background-color: var(--blue-color);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-right: 2%;
+    margin-bottom: 10px;
+}
+.registration:hover {
+    background-color: var(--gray-color);
+}
+
+#createEventBtn {
+    background-color: var(--blue-color);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 40%;
+}
+#createEventBtn:hover {
+    background-color: var(--gray-color);
+}
+
 @media (max-width: 600px) {
-   .container {
-       padding: 10px;
-       width: 700px;
-   }
+    body {
+        background-image: url('../assets/background_mobile.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    .container {
+        padding: 10px;
+        width: 700px;
+    }
     .header {
-         padding: 5px 10px;
-         margin-left: 2px;
+        padding: 5px 10px;
+        margin-left: 2px;
     }
     .logo {
         font-size: 20px;
@@ -232,11 +301,14 @@ th {
         padding: 10px;
         margin-left: 2px;
     }
-    .table{
+    .table {
         width: 600px;
     }
     .actions-bar {
         flex-direction: column;
+        height: 120px;
+        display: flex;
+        flex-direction: row;
     }
     .btn {
         width: 100%;
@@ -259,5 +331,21 @@ th {
         left: 8%;
         height: 30px;
         width: 60px;
+    }
+    .registration {
+        width: 20%;
+        font-size: 14px;
+        height: 30px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    #logoutBtn {
+        width: 100%;
+    }
+    #createEventBtn {
+        width: 100%;
+        height:30px;
+        margin-right: 2px;
+        margin-left: 25%;
     }
 }

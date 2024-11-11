@@ -1,7 +1,8 @@
 import express from 'express';
 import mysql from 'mysql2/promise';
-import { dbConfig } from '../config/database.js';
+import dbConfig from '../config/database.js';
 import auth from '../middleware/auth.js';
+
 const router = express.Router();
 
 // GET /api/events (to fetch all events)
@@ -37,7 +38,7 @@ router.post('/', auth, async (req, res) => {
       is_virtual = false,
       virtual_link = null,
       image_url = null,
-      status= null
+      status = null
     } = req.body;
 
     // Validate required fields
@@ -106,35 +107,52 @@ router.put('/:id', auth, async (req, res) => {
     }
 
     const connection = await mysql.createConnection(dbConfig);
-    const [result] = await connection.execute(
-      'UPDATE events SET name = ?, description = ?, date = ?, start_time = ?, end_time = ?, location = ?, organizer_name = ?, organizer_contact = ?, category = ?, capacity = ?, registration_fee = ?, prerequisites = ?, additional_info = ?, is_virtual = ?, virtual_link = ?, image_url = ? , WHERE id = ?,status = ?',
-      [
-        name,
-        description,
-        date,
-        start_time,
-        end_time,
-        location,
-        organizer_name,
-        organizer_contact,
-        category,
-        capacity,
-        registration_fee,
-        prerequisites,
-        additional_info,
-        is_virtual,
-        virtual_link,
-        image_url,
-        id,
-        status
-      ]
-    );
-    await connection.end();
     
-    if (result.affectedRows === 0) {
-      return res.status(404).json({ message: 'Event not found' });
+    // Start a transaction
+    await connection.beginTransaction();
+
+    try {
+      // Update the existing event
+      const [result] = await connection.execute(
+        'UPDATE events SET name = ?, description = ?, date = ?, start_time = ?, end_time = ?, location = ?, organizer_name = ?, organizer_contact = ?, category = ?, capacity = ?, registration_fee = ?, prerequisites = ?, additional_info = ?, is_virtual = ?, virtual_link = ?, image_url = ?, status = ? WHERE id = ?',
+        [
+          name,
+          description,
+          date,
+          start_time,
+          end_time,
+          location,
+          organizer_name,
+          organizer_contact,
+          category,
+          capacity,
+          registration_fee,
+          prerequisites,
+          additional_info,
+          is_virtual,
+          virtual_link,
+          image_url,
+          status,
+          id
+        ]
+      );
+
+      if (result.affectedRows === 0) {
+        await connection.rollback();
+        await connection.end();
+        return res.status(404).json({ message: 'Event not found' });
+      }
+
+      // If everything is successful, commit the transaction
+      await connection.commit();
+      await connection.end();
+      res.json({ message: 'Event updated successfully' });
+    } catch (error) {
+      // If there's an error, rollback the transaction
+      await connection.rollback();
+      await connection.end();
+      throw error;
     }
-    res.json({ message: 'Event updated successfully' });
   } catch (error) {
     console.error('Error updating event:', error);
     res.status(500).json({ message: 'Server error' });

@@ -2,7 +2,7 @@ import express from 'express';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import mysql from 'mysql2/promise';
-import { dbConfig } from '../config/database.js';
+import dbConfig from '../config/database.js';
 
 const router = express.Router();
 

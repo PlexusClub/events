@@ -9,4 +9,6 @@ const dbConfig = {
   queueLimit: 0
 };
 
-export { dbConfig };
+export default dbConfig;
+
+

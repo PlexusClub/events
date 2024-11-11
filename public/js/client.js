@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         registerBtn.addEventListener('click', (e) => {
             e.stopPropagation();
-            window.location.href = `registration.html?eventId=${event.id}&eventName=${encodeURIComponent(event.name)}`;
+            window.location.href = `form.html?eventId=${event.id}&eventName=${encodeURIComponent(event.name)}`;
         });
 
         return item;
