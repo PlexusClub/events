@@ -139,13 +139,14 @@ th {
     margin-right: 15%;
 }
 input, textarea, select {
-    width: 80%;
+    width: 100%;
     padding: 10px;
-    border: 1px solid ver(--blue-color);
-    background-color: transparent;
     border-radius: 4px;
     font-size: 16px;
-
+    color: var(--font-color);
+    background-color: transparent;
+    border: 1px solid ver(--blue-color);
+   
 }
 
 .form-group {
@@ -164,6 +165,7 @@ input, textarea, select {
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
+    color: var(--font-color);
 }
 
 .checkbox-group {

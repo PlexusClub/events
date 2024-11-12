@@ -142,10 +142,26 @@ router.get('/export/csv', auth, async (req, res) => {
         }
 
         const connection = await mysql.createConnection(dbConfig);
+        
+        // Get event name
+        const [event] = await connection.execute('SELECT name FROM events WHERE id = ?', [event_id]);
+        if (event.length === 0) {
+            await connection.end();
+            return res.status(404).json({ message: 'Event not found' });
+        }
+        const eventName = event[0].name;
+
+        // Get registrations
         const [registrations] = await connection.execute('SELECT * FROM registrations WHERE event_id = ?', [event_id]);
         await connection.end();
 
-        const fields = ['id', 'event_id', 'name', 'roll_no', 'contact_number', 'year', 'branch', 'section', 'college', 'amount_paid', 'paid_to'];
+        // Replace event_id with event name in registrations
+        registrations.forEach(registration => {
+            registration.event_name = eventName;
+            delete registration.event_id;
+        });
+
+        const fields = ['id', 'event_name', 'name', 'roll_no', 'contact_number', 'year', 'branch', 'section', 'college', 'amount_paid', 'paid_to'];
         const json2csvParser = new Parser({ fields });
         const csv = json2csvParser.parse(registrations);
 
@@ -157,5 +173,4 @@ router.get('/export/csv', auth, async (req, res) => {
         res.status(500).json({ message: error.message });
     }
 });
-
 export default router;
