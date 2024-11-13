@@ -1,8 +1,7 @@
 import express from 'express';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
-import mysql from 'mysql2/promise';
-import dbConfig from '../config/database.js';
+import { readDatabase } from '../config/database.js';
 
 const router = express.Router();
 
@@ -16,15 +15,13 @@ router.post('/login', async (req, res) => {
       return res.json({ token });
     }
 
-    const connection = await mysql.createConnection(dbConfig);
-    const [users] = await connection.execute('SELECT * FROM users WHERE username = ?', [username]);
-    await connection.end();
+    const data = await readDatabase();
+    const user = data.users.find(u => u.username === username);
 
-    if (users.length === 0) {
+    if (!user) {
       return res.status(400).json({ message: 'Invalid credentials' });
     }
 
-    const user = users[0];
     const isMatch = await bcrypt.compare(password, user.password);
 
     if (!isMatch) {

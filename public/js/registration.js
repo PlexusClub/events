@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const logoutBtn = document.getElementById('logoutBtn');
     const searchInput = document.getElementById('searchInput');
     const searchButton = document.getElementById('searchButton');
-    const eventSelect = document.getElementById('eventSelect'); 
+    const eventSelect = document.getElementById('eventSelect');
     const formEventSelect = document.getElementById('event_id');
     const exportCsvBtn = document.getElementById('exportCsvBtn');
     const exportPdfBtn = document.getElementById('exportPdfBtn');
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Display registrations in the UI
     function displayRegistrations(registrations) {
         registrationList.innerHTML = registrations.map(registration => `
-            <div class="registration-card">
+            <div class="registration-card" id="registration-${registration.id}">
                 <h3>${registration.name}</h3>
                 <p>Roll No: ${registration.roll_no}</p>
                 <p>Contact: ${registration.contact_number}</p>
@@ -162,6 +162,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (field) field.value = registration[key];
             });
 
+            document.getElementById('registrationId').value = id; // Set the hidden input field for the ID
             registrationFormContainer.style.display = 'block';
         } catch (error) {
             console.error('Error editing registration:', error);
@@ -183,7 +184,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             if (!response.ok) throw new Error('Failed to delete registration');
 
-            loadRegistrations();
+            document.getElementById(`registration-${id}`).remove(); // Remove the registration card from the DOM
         } catch (error) {
             console.error('Error deleting registration:', error);
         }
@@ -215,10 +216,11 @@ document.addEventListener('DOMContentLoaded', function() {
             console.error('Error exporting CSV:', error);
         }
     });
+
     // Event listeners
     createRegistrationBtn.addEventListener('click', () => {
         registrationForm.reset();
-        document.getElementById('registrationId').value = '';
+        document.getElementById('registrationId').value = ''; // Reset the hidden input field for the ID
         registrationFormContainer.style.display = 'block';
     });
 

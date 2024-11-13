@@ -1,6 +1,5 @@
 import express from 'express';
-import mysql from 'mysql2/promise';
-import dbConfig from '../config/database.js';
+import { readDatabase, writeDatabase } from '../config/database.js';
 import auth from '../middleware/auth.js';
 
 const router = express.Router();
@@ -8,10 +7,8 @@ const router = express.Router();
 // GET /api/events (to fetch all events)
 router.get('/', async (req, res) => {
   try {
-    const connection = await mysql.createConnection(dbConfig);
-    const [rows] = await connection.execute('SELECT * FROM events ORDER BY date DESC');
-    await connection.end();
-    res.json(rows);
+    const data = await readDatabase();
+    res.json(data.events);
   } catch (error) {
     console.error('Error fetching events:', error);
     res.status(500).json({ message: 'Server error' });
@@ -41,36 +38,34 @@ router.post('/', auth, async (req, res) => {
       status = null
     } = req.body;
 
-    // Validate required fields
     if (!name) {
       return res.status(400).json({ message: 'Name is required' });
     }
 
-    const connection = await mysql.createConnection(dbConfig);
-    const [result] = await connection.execute(
-      'INSERT INTO events (name, description, date, start_time, end_time, location, organizer_name, organizer_contact, category, capacity, registration_fee, prerequisites, additional_info, is_virtual, virtual_link, image_url, status) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
-      [
-        name,
-        description,
-        date,
-        start_time,
-        end_time,
-        location,
-        organizer_name,
-        organizer_contact,
-        category,
-        capacity,
-        registration_fee,
-        prerequisites,
-        additional_info,
-        is_virtual,
-        virtual_link,
-        image_url,
-        status, 
-      ]
-    );
-    await connection.end();
-    res.status(201).json({ message: 'Event created successfully', id: result.insertId });
+    const data = await readDatabase();
+    const newEvent = {
+      id: Date.now(),
+      name,
+      description,
+      date,
+      start_time,
+      end_time,
+      location,
+      organizer_name,
+      organizer_contact,
+      category,
+      capacity,
+      registration_fee,
+      prerequisites,
+      additional_info,
+      is_virtual,
+      virtual_link,
+      image_url,
+      status
+    };
+    data.events.push(newEvent);
+    await writeDatabase(data);
+    res.status(201).json({ message: 'Event created successfully', id: newEvent.id });
   } catch (error) {
     console.error('Error creating event:', error);
     res.status(500).json({ message: 'Server error' });
@@ -101,58 +96,40 @@ router.put('/:id', auth, async (req, res) => {
       status = null
     } = req.body;
 
-    // Validate required fields
     if (!name) {
       return res.status(400).json({ message: 'Name is required' });
     }
 
-    const connection = await mysql.createConnection(dbConfig);
+    const data = await readDatabase();
+    const eventIndex = data.events.findIndex(event => event.id === parseInt(id));
     
-    // Start a transaction
-    await connection.beginTransaction();
-
-    try {
-      // Update the existing event
-      const [result] = await connection.execute(
-        'UPDATE events SET name = ?, description = ?, date = ?, start_time = ?, end_time = ?, location = ?, organizer_name = ?, organizer_contact = ?, category = ?, capacity = ?, registration_fee = ?, prerequisites = ?, additional_info = ?, is_virtual = ?, virtual_link = ?, image_url = ?, status = ? WHERE id = ?',
-        [
-          name,
-          description,
-          date,
-          start_time,
-          end_time,
-          location,
-          organizer_name,
-          organizer_contact,
-          category,
-          capacity,
-          registration_fee,
-          prerequisites,
-          additional_info,
-          is_virtual,
-          virtual_link,
-          image_url,
-          status,
-          id
-        ]
-      );
-
-      if (result.affectedRows === 0) {
-        await connection.rollback();
-        await connection.end();
-        return res.status(404).json({ message: 'Event not found' });
-      }
-
-      // If everything is successful, commit the transaction
-      await connection.commit();
-      await connection.end();
-      res.json({ message: 'Event updated successfully' });
-    } catch (error) {
-      // If there's an error, rollback the transaction
-      await connection.rollback();
-      await connection.end();
-      throw error;
+    if (eventIndex === -1) {
+      return res.status(404).json({ message: 'Event not found' });
     }
+
+    data.events[eventIndex] = {
+      ...data.events[eventIndex],
+      name,
+      description,
+      date,
+      start_time,
+      end_time,
+      location,
+      organizer_name,
+      organizer_contact,
+      category,
+      capacity,
+      registration_fee,
+      prerequisites,
+      additional_info,
+      is_virtual,
+      virtual_link,
+      image_url,
+      status
+    };
+
+    await writeDatabase(data);
+    res.json({ message: 'Event updated successfully' });
   } catch (error) {
     console.error('Error updating event:', error);
     res.status(500).json({ message: 'Server error' });
@@ -163,13 +140,15 @@ router.put('/:id', auth, async (req, res) => {
 router.delete('/:id', auth, async (req, res) => {
   try {
     const { id } = req.params;
-    const connection = await mysql.createConnection(dbConfig);
-    const [result] = await connection.execute('DELETE FROM events WHERE id = ?', [id]);
-    await connection.end();
+    const data = await readDatabase();
+    const eventIndex = data.events.findIndex(event => event.id === parseInt(id));
     
-    if (result.affectedRows === 0) {
+    if (eventIndex === -1) {
       return res.status(404).json({ message: 'Event not found' });
     }
+
+    data.events.splice(eventIndex, 1);
+    await writeDatabase(data);
     res.json({ message: 'Event deleted successfully' });
   } catch (error) {
     console.error('Error deleting event:', error);

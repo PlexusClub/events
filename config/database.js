@@ -1,14 +1,26 @@
-import 'dotenv/config';
-const dbConfig = {
-  host: process.env.DB_HOST || 'localhost',
-  user: process.env.DB_USER || 'root',
-  password: process.env.DB_PASSWORD || 'Pj2256',
-  database: process.env.DB_NAME || 'events',
-  waitForConnections: true,
-  connectionLimit: 100,
-  queueLimit: 0
-};
+import fs from 'fs/promises';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
-export default dbConfig;
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
+const dbPath = path.join(__dirname, '..', 'database.json');
 
+export async function readDatabase() {
+  try {
+    const data = await fs.readFile(dbPath, 'utf8');
+    return JSON.parse(data);
+  } catch (error) {
+    if (error.code === 'ENOENT') {
+      const initialData = { events: [], users: [], registrations: [] };
+      await writeDatabase(initialData);
+      return initialData;
+    }
+    throw error;
+  }
+}
+
+export async function writeDatabase(data) {
+  await fs.writeFile(dbPath, JSON.stringify(data, null, 2));
+}
