@@ -1,0 +1,187 @@
+[
+    {
+      "id": 1,
+      "name": "Figma Workshop",
+      "image": "https://cdn.prod.website-files.com/59e16042ec229e00016d3a66/64309e7ce733f37f0a4c0880_Figma-rebrand-assets_Blog-hero.webp",
+      "venue": "310 Lab, Block B, MRCE",
+      "timings": "10 AM - 12:30 PM",
+      "dates": "11 March to 13 March",
+      "coordinatedBy": "Design Team Plexus",
+      "registrationLink": "https://forms.gle/8psGUs4tjUwPW7Pt7",
+      "registrationFee": "₹100",
+      "registrationDeadline": "2025-03-11T10:00:00",
+      "registrationStartDate": "2025-03-01T10:00:00",
+      "status": "active",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg",
+      "description": [
+        {
+          "type": "title",
+          "content": "About the Workshop"
+        },
+        {
+          "type": "paragraph",
+          "content": "Join us for an immersive three-day Figma Workshop where you'll learn the fundamentals of UI/UX design using Figma. This hands-on workshop will cover everything from basic interface design to advanced prototyping techniques."
+        },
+        {
+          "type": "subtitle",
+          "content": "What You'll Learn"
+        },
+        {
+          "type": "bulletpoints",
+          "items": [
+            "Figma interface and tools fundamentals",
+            "Creating wireframes and mockups",
+            "Working with components and styles",
+            "Collaborative design workflows",
+            "Advanced prototyping techniques"
+          ]
+        },
+        {
+          "type": "subtitle",
+          "content": "Requirements"
+        },
+        {
+          "type": "paragraph",
+          "content": "Perfect for beginners and intermediate designers looking to enhance their skills. Bring your laptop with Figma installed and get ready to transform your design workflow!"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Web Development Bootcamp",
+      "image": "https://images.unsplash.com/photo-1627398242454-45a1465c2479?q=80&w=1974",
+      "venue": "Seminar Hall, Block A, MRCE",
+      "timings": "2 PM - 5 PM",
+      "dates": "20 March to 25 March",
+      "coordinatedBy": "Development Team Plexus",
+      "registrationLink": "https://forms.gle/webDevBootcamp",
+      "registrationFee": "₹200",
+      "registrationDeadline": "2025-03-18T23:59:59",
+      "registrationStartDate": "2025-03-05T10:00:00",
+      "status": "coming-soon",
+      "description": [
+        {
+          "type": "title",
+          "content": "Full Stack Web Development Bootcamp"
+        },
+        {
+          "type": "paragraph",
+          "content": "Dive into the world of web development with our comprehensive bootcamp. Learn to build modern, responsive websites from scratch using the latest technologies and frameworks."
+        },
+        {
+          "type": "subtitle",
+          "content": "Course Curriculum"
+        },
+        {
+          "type": "bulletpoints",
+          "items": [
+            "HTML5, CSS3, and JavaScript fundamentals",
+            "Responsive design with CSS frameworks",
+            "Backend development with Node.js",
+            "Database integration with MongoDB",
+            "Deploying your applications"
+          ]
+        },
+        {
+          "type": "subtitle",
+          "content": "Who Should Attend"
+        },
+        {
+          "type": "paragraph",
+          "content": "This bootcamp is designed for students with basic programming knowledge who want to dive into web development. No prior web development experience required."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Hackathon 2025",
+      "image": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1770",
+      "venue": "Computer Labs, Block C, MRCE",
+      "timings": "9 AM - 9 PM",
+      "dates": "5 April to 6 April",
+      "coordinatedBy": "Plexus Core Team",
+      "registrationLink": "https://forms.gle/hackathon2025",
+      "registrationFee": "₹150 per team",
+      "registrationDeadline": "2025-04-03T23:59:59",
+      "registrationStartDate": "2025-03-15T10:00:00",
+      "status": "pre-production",
+      "description": [
+        {
+          "type": "title",
+          "content": "Annual Hackathon 2025"
+        },
+        {
+          "type": "paragraph",
+          "content": "The biggest coding event of the year is back! Join us for a 24-hour hackathon where you'll collaborate with fellow programmers to solve real-world problems and showcase your skills."
+        },
+        {
+          "type": "subtitle",
+          "content": "Theme & Challenges"
+        },
+        {
+          "type": "paragraph",
+          "content": "This year's theme focuses on 'Technology for Sustainable Development'. Teams will work on creating innovative solutions addressing environmental challenges, resource management, or community development."
+        },
+        {
+          "type": "subtitle",
+          "content": "Prizes"
+        },
+        {
+          "type": "bulletpoints",
+          "items": [
+            "1st Place: ₹10,000 + Internship Opportunities",
+            "2nd Place: ₹7,000 + Tech Gadgets",
+            "3rd Place: ₹5,000",
+            "Best UI/UX: Special Prize",
+            "Most Innovative Idea: Special Prize"
+          ]
+        },
+        {
+          "type": "subtitle",
+          "content": "Team Requirements"
+        },
+        {
+          "type": "paragraph",
+          "content": "Form teams of 2-4 members. Multi-disciplinary teams are encouraged!"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "AI Workshop Series",
+      "image": "https://plus.unsplash.com/premium_photo-1683121710572-7723bd2e235d?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YXJ0aWZpY2lhbCUyMGludGVsbGlnZW5jZXxlbnwwfHwwfHx8MA%3D%3D",
+      "venue": "Online (Zoom)",
+      "timings": "6 PM - 8 PM",
+      "dates": "Every Saturday in April",
+      "coordinatedBy": "AI Research Group & Plexus",
+      "registrationLink": "https://forms.gle/aiworkshop",
+      "registrationFee": "Free",
+      "registrationDeadline": "2025-04-01T23:59:59",
+      "registrationStartDate": "2025-03-10T10:00:00",
+      "status": "cancelled",
+      "description": [
+        {
+          "type": "title",
+          "content": "Introduction to Artificial Intelligence"
+        },
+        {
+          "type": "paragraph",
+          "content": "This workshop series has been cancelled due to unavailability of key speakers. We'll announce new dates soon. Sorry for the inconvenience."
+        },
+        {
+          "type": "subtitle",
+          "content": "What We Planned to Cover"
+        },
+        {
+          "type": "bulletpoints",
+          "items": [
+            "Fundamentals of Machine Learning",
+            "Natural Language Processing",
+            "Computer Vision Applications",
+            "Introduction to Large Language Models",
+            "Ethical considerations in AI"
+          ]
+        }
+      ]
+    }
+  ]
