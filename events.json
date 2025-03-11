@@ -1,1 +1,196 @@
-[]
+[
+    {
+      "id": 202501,
+      "name": "Code-Con: The Ultimate Tech Challenge",
+      "image": "https://images.unsplash.com/photo-1627398242454-45a1465c2479?q=80&w=1974",
+      "venue": "Placement Cell",
+      "timings": "10 AM - 3 PM",
+      "dates": "17 March 2025",
+      "coordinatedBy": "PLEXUS - Technical Club",
+      "registrationLink": "https://forms.gle/webDevBootcamp",
+      "registrationDeadline": "2025-03-10T23:59:59",
+      "status": "active",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/512px-Visual_Studio_Code_1.35_icon.svg.png",
+      "description": [
+        {
+          "type": "title",
+          "content": "Code-Con: The Ultimate Tech Challenge"
+        },
+        {
+          "type": "paragraph",
+          "content": "The theme focuses on the journey of participants through different stages of technical mastery, from trivia to time-based coding challenges, culminating in a final high-stakes conquest. It aligns with the structured rounds and competitive spirit of the event."
+        },
+        {
+          "type": "subtitle",
+          "content": "Purpose"
+        },
+        {
+          "type": "paragraph",
+          "content": "To empower students to work under pressure, experience unexpected workplace scenarios through simulation, and increase domain knowledge through quizzes and subject mastery."
+        },
+        {
+          "type": "subtitle",
+          "content": "Event Blueprint"
+        },
+        {
+          "type": "bulletpoints",
+          "items": [
+            "Syllabus: C-language, Python, Data Structures",
+            "Team-based competition with elimination rounds",
+            "Progressive difficulty structure"
+          ]
+        },
+        {
+          "type": "subtitle",
+          "content": "Round 1 - Tech Trivia"
+        },
+        {
+          "type": "bulletpoints",
+          "items": [
+            "20 questions per member (online/paper-based)",
+            "Team average determines qualification",
+            "Qualifying teams receive 50 points",
+            "Duration: 20 minutes",
+            "Elimination round"
+          ]
+        },
+        {
+          "type": "subtitle",
+          "content": "Round 2 - Time Trial"
+        },
+        {
+          "type": "bulletpoints",
+          "items": [
+            "Relay format: C language (45 mins) + Python (45 mins)",
+            "Points based on difficulty (Easy: 5, Medium: 10, Hard: 20)",
+            "Question exchange penalty: -5 points",
+            "Total duration: 1.5 hours",
+            "Elimination round"
+          ]
+        },
+        {
+          "type": "subtitle",
+          "content": "Round 3 - The Conquest"
+        },
+        {
+          "type": "bulletpoints",
+          "items": [
+            "High-difficulty team challenge",
+            "Evaluation criteria: Accuracy, Completion, Presentation, Approach",
+            "Total score: 20 points",
+            "Duration: 1 hour"
+          ]
+        },
+        {
+          "type": "subtitle",
+          "content": "Eligibility"
+        },
+        {
+          "type": "bulletpoints",
+          "items": [
+            "Open to 2nd & 3rd year students",
+            "All departments allowed (CSM, CSE, CSD, AIDS, ECE, IT)",
+            "2-member teams required",
+            "No spot registrations"
+          ]
+        },
+        {
+          "type": "subtitle",
+          "content": "Tech Stack"
+        },
+        {
+          "type": "bulletpoints",
+          "items": [
+            "C Language",
+            "Python"
+          ]
+        },
+        {
+          "type": "subtitle",
+          "content": "Prizes & Rewards"
+        },
+        {
+          "type": "bulletpoints",
+          "items": [
+            "1st Place: Certificate + Cash Prize",
+            "2nd Place: Certificate + Cash Prize",
+            "Top 10: Certificates + Internship opportunities",
+            "All participants: Participation certificates"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 202502,
+      "name": "Figma Workshop",
+      "image": "https://cdn.prod.website-files.com/59e16042ec229e00016d3a66/64309e7ce733f37f0a4c0880_Figma-rebrand-assets_Blog-hero.webp",
+      "venue": "310 Lab, Block B, MRCE",
+      "timings": "10 AM - 12:30 PM",
+      "dates": "March/April 2025",
+      "coordinatedBy": "Design Team Plexus",
+      "registrationLink": "https://forms.gle/8psGUs4tjUwPW7Pt7",
+      "registrationFee": "₹100",
+      "registrationDeadline": "2025-03-11T10:00:00",
+      "registrationStartDate": "2025-03-01T10:00:00",
+      "status": "coming-soon",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg",
+      "description": [
+        {
+          "type": "title",
+          "content": "3-Day Figma UI/UX Workshop Agenda"
+        },
+        {
+          "type": "subtitle",
+          "content": "Day 1: Introduction to UI/UX & Figma Basics"
+        },
+        {
+          "type": "paragraph",
+          "content": "Duration: 2.5 Hours\n\nKick off your design journey with an exciting introduction to the world of UI/UX design and Figma! We’ll start with a warm welcome and an overview of what you’ll achieve over the next three days. After a fun icebreaker, dive into the essentials of UI (User Interface) and UX (User Experience) design, exploring key principles like usability, accessibility, and consistency."
+        },
+        {
+          "type": "bulletpoints",
+          "items": [
+            "Learn the difference between UI and UX",
+            "Explore Figma’s workspace and tools",
+            "Create your first wireframe!"
+          ]
+        },
+        {
+          "type": "subtitle",
+          "content": "Day 2: Design Principles & Prototyping"
+        },
+        {
+          "type": "paragraph",
+          "content": "Dive deeper into design principles like typography, color theory, and spacing. Explore Figma’s prototyping tools to link frames, add interactions, and create multi-screen prototypes. End with a sharing session to present work and receive feedback."
+        },
+        {
+          "type": "bulletpoints",
+          "items": [
+            "Master visual design principles",
+            "Create interactive prototypes",
+            "Peer feedback session"
+          ]
+        },
+        {
+          "type": "subtitle",
+          "content": "Day 3: Collaboration & Final Projects"
+        },
+        {
+          "type": "paragraph",
+          "content": "Focus on collaboration and usability testing. Work in teams to refine prototypes, apply feedback, and improve usability. Culminate with final project presentations showcasing your app design and UI/UX principles application. Celebrate achievements with feedback and optional awards!"
+        },
+        {
+          "type": "bulletpoints",
+          "items": [
+            "Team collaboration exercises",
+            "Usability testing practice",
+            "Final project showcase"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": "Perfect for anyone looking to enhance design skills and create interactive, user-friendly prototypes. Bring your laptop with Figma installed!"
+        }
+      ]
+    }
+  ]
