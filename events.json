@@ -2,7 +2,7 @@
     {
       "id": 202501,
       "name": "Code-Con: The Ultimate Tech Challenge",
-      "image": "https://images.unsplash.com/photo-1627398242454-45a1465c2479?q=80&w=1974",
+      "image": "./images/codecon.png",
       "venue": "Placement Cell",
       "timings": "10 AM - 3 PM",
       "dates": "17 March 2025",
@@ -89,7 +89,6 @@
           "type": "bulletpoints",
           "items": [
             "Open to 2nd & 3rd year students",
-            "All departments allowed (CSM, CSE, CSD, AIDS, ECE, IT)",
             "2-member teams required",
             "No spot registrations"
           ]
@@ -122,6 +121,120 @@
     },
     {
       "id": 202502,
+      "name": "VERBO FIESTA - An Exciting Verbal Arena",
+      "image": "./images/verbofita.png",
+      "venue": "Main Block: 310, 311, 312, 316",
+      "timings": "10:00 AM - 12:40 PM",
+      "dates": "18 March 2025",
+      "coordinatedBy": "PLEXUS - Non-Technical Club",
+      "registrationLink": "https://forms.gle/FiNoRCpvEPfkpaSG8",
+      "registrationDeadline": "2025-03-16T23:59:59",
+      "status": "active",
+      "logo": "",
+      "description": [
+        {
+          "type": "title",
+          "content": "VERBO FIESTA - An Exciting Verbal Arena"
+        },
+        {
+          "type": "paragraph",
+          "content": "VERBO FIESTA is a thrilling verbal showdown where participants battle it out in a series of events aimed at testing their public speaking, debating, and creative thinking skills. Whether you're making persuasive arguments, selling a product, or weaving words together, this event will challenge your communication abilities in exciting and unexpected ways."
+        },
+        {
+          "type": "subtitle",
+          "content": "Purpose"
+        },
+        {
+          "type": "paragraph",
+          "content": "To promote verbal dexterity, critical thinking, creativity, and teamwork through fun and competitive challenges. The event aims to enhance public speaking and problem-solving skills in an engaging environment."
+        },
+        {
+          "type": "subtitle",
+          "content": "Event Blueprint"
+        },
+        {
+          "type": "bulletpoints",
+          "items": [
+            "Team-based competitions",
+            "Progressive rounds of increasing difficulty",
+            "Challenges testing debate, creativity, and quick thinking"
+          ]
+        },
+        {
+          "type": "subtitle",
+          "content": "EVENT-1: Debate Competition"
+        },
+        {
+          "type": "paragraph",
+          "content": "Participants engage in a formal debate on a motion, with one speaker advocating for the motion and the other against it."
+        },
+        {
+          "type": "bulletpoints",
+          "items": [
+            "Eligibility: Students from the designated institution",
+            "Team of two (one for the motion, one against)",
+            "Each speaker gets 3 minutes, followed by a 1-minute rebuttal",
+            "Judging Criteria: Content, Clarity, Confidence, and Rebuttal"
+          ]
+        },
+        {
+          "type": "subtitle",
+          "content": "EVENT-2: Commercial Time"
+        },
+        {
+          "type": "paragraph",
+          "content": "In this event, participants pick an item randomly and attempt to sell it using their persuasive communication skills."
+        },
+        {
+          "type": "bulletpoints",
+          "items": [
+            "Stick to a 3-minute time limit",
+            "Both team members must contribute equally",
+            "Use creative and original advertising techniques",
+            "No offensive or uncivilized content"
+          ]
+        },
+        {
+          "type": "subtitle",
+          "content": "EVENT-3: Word Weave"
+        },
+        {
+          "type": "paragraph",
+          "content": "Word Weave is a team-based game that challenges participants to form creative, grammatically correct sentences using randomly assigned words."
+        },
+        {
+          "type": "bulletpoints",
+          "items": [
+            "Team size: 4 members",
+            "At least four teams (A, B, C, D) required",
+            "Create a sentence using 3 random words in 1-2 minutes",
+            "Sentence must be meaningful, grammatically correct, and creative"
+          ]
+        },
+        {
+          "type": "subtitle",
+          "content": "EVENT-4: JAM"
+        },
+        {
+          "type": "paragraph",
+          "content": "JAM (Just a Minute) is a fun and fast-paced event where participants are given a topic and must speak about it for one minute without hesitation, repetition, or deviation."
+        },
+        {
+          "type": "subtitle",
+          "content": "Eligibility"
+        },
+        {
+          "type": "bulletpoints",
+          "items": [
+            "Open to all students",
+            "Team-based or individual participation, as specified in each event",
+            "No spot registrations"
+          ]
+        }
+      ]
+    },    
+    {
+      "id": 202503,
       "name": "Figma Workshop",
       "image": "https://cdn.prod.website-files.com/59e16042ec229e00016d3a66/64309e7ce733f37f0a4c0880_Figma-rebrand-assets_Blog-hero.webp",
       "venue": "310 Lab, Block B, MRCE",
