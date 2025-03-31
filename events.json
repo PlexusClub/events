@@ -1,309 +1,311 @@
 [
-    {
-      "id": 202501,
-      "name": "Code-Con: The Ultimate Tech Challenge",
-      "image": "./events/images/codecon.png",
-      "venue": "Placement Cell",
-      "timings": "10 AM - 3 PM",
-      "dates": "17 March 2025",
-      "coordinatedBy": "PLEXUS - Technical Club",
-      "registrationLink": "https://forms.gle/JqB6XeSgs94h9MfS8",
-      "registrationDeadline": "2025-03-15T23:59:59",
-      "status": "active",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/512px-Visual_Studio_Code_1.35_icon.svg.png",
-      "description": [
-        {
-          "type": "title",
-          "content": "Code-Con: The Ultimate Tech Challenge"
-        },
-        {
-          "type": "paragraph",
-          "content": "The theme focuses on the journey of participants through different stages of technical mastery, from trivia to time-based coding challenges, culminating in a final high-stakes conquest. It aligns with the structured rounds and competitive spirit of the event."
-        },
-        {
-          "type": "subtitle",
-          "content": "Purpose"
-        },
-        {
-          "type": "paragraph",
-          "content": "To empower students to work under pressure, experience unexpected workplace scenarios through simulation, and increase domain knowledge through quizzes and subject mastery."
-        },
-        {
-          "type": "subtitle",
-          "content": "Event Blueprint"
-        },
-        {
-          "type": "bulletpoints",
-          "items": [
-            "Syllabus: C-language, Python, Data Structures",
-            "Team-based competition with elimination rounds",
-            "Progressive difficulty structure"
-          ]
-        },
-        {
-          "type": "subtitle",
-          "content": "Round 1 - Tech Trivia"
-        },
-        {
-          "type": "bulletpoints",
-          "items": [
-            "20 questions per member (online/paper-based)",
-            "Team average determines qualification",
-            "Qualifying teams receive 50 points",
-            "Duration: 20 minutes",
-            "Elimination round"
-          ]
-        },
-        {
-          "type": "subtitle",
-          "content": "Round 2 - Time Trial"
-        },
-        {
-          "type": "bulletpoints",
-          "items": [
-            "Relay format: C language (45 mins) + Python (45 mins)",
-            "Points based on difficulty (Easy: 5, Medium: 10, Hard: 20)",
-            "Question exchange penalty: -5 points",
-            "Total duration: 1.5 hours",
-            "Elimination round"
-          ]
-        },
-        {
-          "type": "subtitle",
-          "content": "Round 3 - The Conquest"
-        },
-        {
-          "type": "bulletpoints",
-          "items": [
-            "High-difficulty team challenge",
-            "Evaluation criteria: Accuracy, Completion, Presentation, Approach",
-            "Total score: 20 points",
-            "Duration: 1 hour"
-          ]
-        },
-        {
-          "type": "subtitle",
-          "content": "Eligibility"
-        },
-        {
-          "type": "bulletpoints",
-          "items": [
-            "Open to 2nd, 3rd & 4th year students",
-            "2-member teams required",
-            "No spot registrations"
-          ]
-        },
-        {
-          "type": "subtitle",
-          "content": "Tech Stack"
-        },
-        {
-          "type": "bulletpoints",
-          "items": [
-            "C Language",
-            "Python"
-          ]
-        },
-        {
-          "type": "subtitle",
-          "content": "Prizes & Rewards"
-        },
-        {
-          "type": "bulletpoints",
-          "items": [
-            "1st Place: Certificate + Cash Prize",
-            "2nd Place: Certificate + Cash Prize",
-            "Top 10: Certificates + Internship opportunities",
-            "All participants: Participation certificates"
-          ]
-        }
-      ]
-    },
-    {
-      "id": 202502,
-      "name": "VERBO FIESTA - An Exciting Verbal Arena",
-      "image": "./events/images/verbofita.png",
-      "venue": "Main Block: 310, 311, 312, 316",
-      "timings": "10:00 AM - 12:40 PM",
-      "dates": "18 March 2025",
-      "coordinatedBy": "PLEXUS - Non-Technical Club",
-      "registrationLink": "https://forms.gle/FiNoRCpvEPfkpaSG8",
-      "registrationDeadline": "2025-03-17T18:59:59",
-      "status": "active",
-      "logo": "",
-      "description": [
-        {
-          "type": "title",
-          "content": "VERBO FIESTA - An Exciting Verbal Arena"
-        },
-        {
-          "type": "paragraph",
-          "content": "VERBO FIESTA is a thrilling verbal showdown where participants battle it out in a series of events aimed at testing their public speaking, debating, and creative thinking skills. Whether you're making persuasive arguments, selling a product, or weaving words together, this event will challenge your communication abilities in exciting and unexpected ways."
-        },
-        {
-          "type": "subtitle",
-          "content": "Purpose"
-        },
-        {
-          "type": "paragraph",
-          "content": "To promote verbal dexterity, critical thinking, creativity, and teamwork through fun and competitive challenges. The event aims to enhance public speaking and problem-solving skills in an engaging environment."
-        },
-        {
-          "type": "subtitle",
-          "content": "Event Blueprint"
-        },
-        {
-          "type": "bulletpoints",
-          "items": [
-            "Team-based competitions",
-            "Progressive rounds of increasing difficulty",
-            "Challenges testing debate, creativity, and quick thinking"
-          ]
-        },
-        {
-          "type": "subtitle",
-          "content": "EVENT-1: Debate Competition"
-        },
-        {
-          "type": "paragraph",
-          "content": "Participants engage in a formal debate on a motion, with one speaker advocating for the motion and the other against it."
-        },
-        {
-          "type": "bulletpoints",
-          "items": [
-            "Eligibility: Students from the designated institution",
-            "Team of two (one for the motion, one against)",
-            "Each speaker gets 3 minutes, followed by a 1-minute rebuttal",
-            "Judging Criteria: Content, Clarity, Confidence, and Rebuttal"
-          ]
-        },
-        {
-          "type": "subtitle",
-          "content": "EVENT-2: Commercial Time"
-        },
-        {
-          "type": "paragraph",
-          "content": "In this event, participants pick an item randomly and attempt to sell it using their persuasive communication skills."
-        },
-        {
-          "type": "bulletpoints",
-          "items": [
-            "Stick to a 3-minute time limit",
-            "Both team members must contribute equally",
-            "Use creative and original advertising techniques",
-            "No offensive or uncivilized content"
-          ]
-        },
-        {
-          "type": "subtitle",
-          "content": "EVENT-3: Word Weave"
-        },
-        {
-          "type": "paragraph",
-          "content": "Word Weave is a team-based game that challenges participants to form creative, grammatically correct sentences using randomly assigned words."
-        },
-        {
-          "type": "bulletpoints",
-          "items": [
-            "Team size: 4 members",
-            "At least four teams (A, B, C, D) required",
-            "Create a sentence using 3 random words in 1-2 minutes",
-            "Sentence must be meaningful, grammatically correct, and creative"
-          ]
-        },
-        {
-          "type": "subtitle",
-          "content": "EVENT-4: JAM"
-        },
-        {
-          "type": "paragraph",
-          "content": "JAM (Just a Minute) is a fun and fast-paced event where participants are given a topic and must speak about it for one minute without hesitation, repetition, or deviation."
-        },
-        {
-          "type": "subtitle",
-          "content": "Eligibility"
-        },
-        {
-          "type": "bulletpoints",
-          "items": [
-            "Open to all students",
-            "Team-based or individual participation, as specified in each event",
-            "No spot registrations"
-          ]
-        }
-      ]
-    },    
-    {
-      "id": 202503,
-      "name": "Figma Workshop",
-      "image": "https://cdn.prod.website-files.com/59e16042ec229e00016d3a66/64309e7ce733f37f0a4c0880_Figma-rebrand-assets_Blog-hero.webp",
-      "venue": "310 Lab, Block B, MRCE",
-      "timings": "10 AM - 12:30 PM",
-      "dates": "March/April 2025",
-      "coordinatedBy": "Design Team Plexus",
-      "registrationLink": "https://forms.gle/8psGUs4tjUwPW7Pt7",
-      "registrationFee": "₹100",
-      "registrationDeadline": "2025-03-11T10:00:00",
-      "registrationStartDate": "2025-03-01T10:00:00",
-      "status": "coming-soon",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg",
-      "description": [
-        {
-          "type": "title",
-          "content": "3-Day Figma UI/UX Workshop Agenda"
-        },
-        {
-          "type": "subtitle",
-          "content": "Day 1: Introduction to UI/UX & Figma Basics"
-        },
-        {
-          "type": "paragraph",
-          "content": "Duration: 2.5 Hours\n\nKick off your design journey with an exciting introduction to the world of UI/UX design and Figma! We’ll start with a warm welcome and an overview of what you’ll achieve over the next three days. After a fun icebreaker, dive into the essentials of UI (User Interface) and UX (User Experience) design, exploring key principles like usability, accessibility, and consistency."
-        },
-        {
-          "type": "bulletpoints",
-          "items": [
-            "Learn the difference between UI and UX",
-            "Explore Figma’s workspace and tools",
-            "Create your first wireframe!"
-          ]
-        },
-        {
-          "type": "subtitle",
-          "content": "Day 2: Design Principles & Prototyping"
-        },
-        {
-          "type": "paragraph",
-          "content": "Dive deeper into design principles like typography, color theory, and spacing. Explore Figma’s prototyping tools to link frames, add interactions, and create multi-screen prototypes. End with a sharing session to present work and receive feedback."
-        },
-        {
-          "type": "bulletpoints",
-          "items": [
-            "Master visual design principles",
-            "Create interactive prototypes",
-            "Peer feedback session"
-          ]
-        },
-        {
-          "type": "subtitle",
-          "content": "Day 3: Collaboration & Final Projects"
-        },
-        {
-          "type": "paragraph",
-          "content": "Focus on collaboration and usability testing. Work in teams to refine prototypes, apply feedback, and improve usability. Culminate with final project presentations showcasing your app design and UI/UX principles application. Celebrate achievements with feedback and optional awards!"
-        },
-        {
-          "type": "bulletpoints",
-          "items": [
-            "Team collaboration exercises",
-            "Usability testing practice",
-            "Final project showcase"
-          ]
-        },
-        {
-          "type": "paragraph",
-          "content": "Perfect for anyone looking to enhance design skills and create interactive, user-friendly prototypes. Bring your laptop with Figma installed!"
-        }
-      ]
-    }
-  ]
+  {
+    "id": 202503,
+    "name": "Figma Workshop",
+    "image": "https://cdn.prod.website-files.com/59e16042ec229e00016d3a66/64309e7ce733f37f0a4c0880_Figma-rebrand-assets_Blog-hero.webp",
+    "venue": "MRCE",
+    "timings": "10 AM - 12:30 PM",
+    "dates": "April 2025",
+    "coordinatedBy": "Design Team Plexus",
+    "registrationLink": "https://forms.gle/8psGUs4tjUwPW7Pt7",
+    "registrationFee": "₹100",
+    "registrationDeadline": "2025-03-11T10:00:00",
+    "registrationStartDate": "2025-03-01T10:00:00",
+    "status": "coming-soon",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg",
+    "description": [
+      {
+        "type": "title",
+        "content": "3-Day Figma UI/UX Workshop Agenda"
+      },
+      {
+        "type": "subtitle",
+        "content": "Day 1: Introduction to UI/UX & Figma Basics"
+      },
+      {
+        "type": "paragraph",
+        "content": "Duration: 2.5 Hours\n\nKick off your design journey with an exciting introduction to the world of UI/UX design and Figma! We’ll start with a warm welcome and an overview of what you’ll achieve over the next three days. After a fun icebreaker, dive into the essentials of UI (User Interface) and UX (User Experience) design, exploring key principles like usability, accessibility, and consistency."
+      },
+      {
+        "type": "bulletpoints",
+        "items": [
+          "Learn the difference between UI and UX",
+          "Explore Figma’s workspace and tools",
+          "Create your first wireframe!"
+        ]
+      },
+      {
+        "type": "subtitle",
+        "content": "Day 2: Design Principles & Prototyping"
+      },
+      {
+        "type": "paragraph",
+        "content": "Dive deeper into design principles like typography, color theory, and spacing. Explore Figma’s prototyping tools to link frames, add interactions, and create multi-screen prototypes. End with a sharing session to present work and receive feedback."
+      },
+      {
+        "type": "bulletpoints",
+        "items": [
+          "Master visual design principles",
+          "Create interactive prototypes",
+          "Peer feedback session"
+        ]
+      },
+      {
+        "type": "subtitle",
+        "content": "Day 3: Collaboration & Final Projects"
+      },
+      {
+        "type": "paragraph",
+        "content": "Focus on collaboration and usability testing. Work in teams to refine prototypes, apply feedback, and improve usability. Culminate with final project presentations showcasing your app design and UI/UX principles application. Celebrate achievements with feedback and optional awards!"
+      },
+      {
+        "type": "bulletpoints",
+        "items": [
+          "Team collaboration exercises",
+          "Usability testing practice",
+          "Final project showcase"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": "Perfect for anyone looking to enhance design skills and create interactive, user-friendly prototypes. Bring your laptop with Figma installed!"
+      }
+    ]
+  },
+  {
+    "id": 202502,
+    "name": "VERBO FIESTA - An Exciting Verbal Arena",
+    "image": "https://plexusclub.github.io/events/images/verbofita.png",
+    "venue": "Seminar Hall, Main Block: Room 316, MRCE",
+    "timings": "10:00 AM - 12:40 PM",
+    "dates": "18 March 2025",
+    "coordinatedBy": "PLEXUS - Non-Technical Club",
+    "registrationLink": "https://forms.gle/FiNoRCpvEPfkpaSG8",
+    "registrationFee": "₹50-₹150",
+    "registrationDeadline": "2025-03-17T18:59:59",
+    "status": "ended",
+    "logo": "",
+    "description": [
+      {
+        "type": "title",
+        "content": "VERBO FIESTA - An Exciting Verbal Arena"
+      },
+      {
+        "type": "paragraph",
+        "content": "VERBO FIESTA is a thrilling verbal showdown where participants battle it out in a series of events aimed at testing their public speaking, debating, and creative thinking skills. Whether you're making persuasive arguments, selling a product, or weaving words together, this event will challenge your communication abilities in exciting and unexpected ways."
+      },
+      {
+        "type": "subtitle",
+        "content": "Purpose"
+      },
+      {
+        "type": "paragraph",
+        "content": "To promote verbal dexterity, critical thinking, creativity, and teamwork through fun and competitive challenges. The event aims to enhance public speaking and problem-solving skills in an engaging environment."
+      },
+      {
+        "type": "subtitle",
+        "content": "Event Blueprint"
+      },
+      {
+        "type": "bulletpoints",
+        "items": [
+          "Team-based competitions",
+          "Progressive rounds of increasing difficulty",
+          "Challenges testing debate, creativity, and quick thinking"
+        ]
+      },
+      {
+        "type": "subtitle",
+        "content": "EVENT-1: Debate Competition"
+      },
+      {
+        "type": "paragraph",
+        "content": "Participants engage in a formal debate on a motion, with one speaker advocating for the motion and the other against it."
+      },
+      {
+        "type": "bulletpoints",
+        "items": [
+          "Eligibility: Students from the designated institution",
+          "Team of two (one for the motion, one against)",
+          "Each speaker gets 3 minutes, followed by a 1-minute rebuttal",
+          "Judging Criteria: Content, Clarity, Confidence, and Rebuttal"
+        ]
+      },
+      {
+        "type": "subtitle",
+        "content": "EVENT-2: Commercial Time"
+      },
+      {
+        "type": "paragraph",
+        "content": "In this event, participants pick an item randomly and attempt to sell it using their persuasive communication skills."
+      },
+      {
+        "type": "bulletpoints",
+        "items": [
+          "Stick to a 3-minute time limit",
+          "Both team members must contribute equally",
+          "Use creative and original advertising techniques",
+          "No offensive or uncivilized content"
+        ]
+      },
+      {
+        "type": "subtitle",
+        "content": "EVENT-3: Word Weave"
+      },
+      {
+        "type": "paragraph",
+        "content": "Word Weave is a team-based game that challenges participants to form creative, grammatically correct sentences using randomly assigned words."
+      },
+      {
+        "type": "bulletpoints",
+        "items": [
+          "Team size: 4 members",
+          "At least four teams (A, B, C, D) required",
+          "Create a sentence using 3 random words in 1-2 minutes",
+          "Sentence must be meaningful, grammatically correct, and creative"
+        ]
+      },
+      {
+        "type": "subtitle",
+        "content": "EVENT-4: JAM"
+      },
+      {
+        "type": "paragraph",
+        "content": "JAM (Just a Minute) is a fun and fast-paced event where participants are given a topic and must speak about it for one minute without hesitation, repetition, or deviation."
+      },
+      {
+        "type": "subtitle",
+        "content": "Eligibility"
+      },
+      {
+        "type": "bulletpoints",
+        "items": [
+          "Open to all students",
+          "Team-based or individual participation, as specified in each event",
+          "No spot registrations"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 202501,
+    "name": "Code-Con: The Ultimate Tech Challenge",
+    "image": "https://plexusclub.github.io/events/images/codecon.png",
+    "venue": "Main Block: Room 316, MRCE",
+    "timings": "10 AM - 3 PM",
+    "dates": "17 March 2025",
+    "coordinatedBy": "PLEXUS - Technical Club",
+    "registrationLink": "https://forms.gle/JqB6XeSgs94h9MfS8",
+    "registrationFee": "₹150",
+    "registrationDeadline": "2025-03-15T23:59:59",
+    "status": "ended",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/512px-Visual_Studio_Code_1.35_icon.svg.png",
+    "description": [
+      {
+        "type": "title",
+        "content": "Code-Con: The Ultimate Tech Challenge"
+      },
+      {
+        "type": "paragraph",
+        "content": "The theme focuses on the journey of participants through different stages of technical mastery, from trivia to time-based coding challenges, culminating in a final high-stakes conquest. It aligns with the structured rounds and competitive spirit of the event."
+      },
+      {
+        "type": "subtitle",
+        "content": "Purpose"
+      },
+      {
+        "type": "paragraph",
+        "content": "To empower students to work under pressure, experience unexpected workplace scenarios through simulation, and increase domain knowledge through quizzes and subject mastery."
+      },
+      {
+        "type": "subtitle",
+        "content": "Event Blueprint"
+      },
+      {
+        "type": "bulletpoints",
+        "items": [
+          "Syllabus: C-language, Python, Data Structures",
+          "Team-based competition with elimination rounds",
+          "Progressive difficulty structure"
+        ]
+      },
+      {
+        "type": "subtitle",
+        "content": "Round 1 - Tech Trivia"
+      },
+      {
+        "type": "bulletpoints",
+        "items": [
+          "20 questions per member (online/paper-based)",
+          "Team average determines qualification",
+          "Qualifying teams receive 50 points",
+          "Duration: 20 minutes",
+          "Elimination round"
+        ]
+      },
+      {
+        "type": "subtitle",
+        "content": "Round 2 - Time Trial"
+      },
+      {
+        "type": "bulletpoints",
+        "items": [
+          "Relay format: C language (45 mins) + Python (45 mins)",
+          "Points based on difficulty (Easy: 5, Medium: 10, Hard: 20)",
+          "Question exchange penalty: -5 points",
+          "Total duration: 1.5 hours",
+          "Elimination round"
+        ]
+      },
+      {
+        "type": "subtitle",
+        "content": "Round 3 - The Conquest"
+      },
+      {
+        "type": "bulletpoints",
+        "items": [
+          "High-difficulty team challenge",
+          "Evaluation criteria: Accuracy, Completion, Presentation, Approach",
+          "Total score: 20 points",
+          "Duration: 1 hour"
+        ]
+      },
+      {
+        "type": "subtitle",
+        "content": "Eligibility"
+      },
+      {
+        "type": "bulletpoints",
+        "items": [
+          "Open to 2nd, 3rd & 4th year students",
+          "2-member teams required",
+          "No spot registrations"
+        ]
+      },
+      {
+        "type": "subtitle",
+        "content": "Tech Stack"
+      },
+      {
+        "type": "bulletpoints",
+        "items": [
+          "C Language",
+          "Python"
+        ]
+      },
+      {
+        "type": "subtitle",
+        "content": "Prizes & Rewards"
+      },
+      {
+        "type": "bulletpoints",
+        "items": [
+          "1st Place: Certificate + Cash Prize",
+          "2nd Place: Certificate + Cash Prize",
+          "Top 10: Certificates + Internship opportunities",
+          "All participants: Participation certificates"
+        ]
+      }
+    ]
+  }
+]
